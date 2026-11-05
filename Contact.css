@@ -1,0 +1,428 @@
+@font-face {
+    font-family: "Archivo";
+    src: url("./Fonts/Archivo-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Archivo";
+    src: url("./Fonts/Archivo-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Archivo";
+    src: url("./Fonts/Archivo-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Archivo";
+    src: url("./Fonts/Archivo-Bold.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+body{
+    background-color: #1C1D20;
+    font-family: "Archivo", sans-serif;
+    /* font-weight: 900; */
+    /* overflow-x: hidden; */
+}
+
+/* nav bar  */
+
+.herosection{
+    /* background-color: #999D9E; */
+    /* height: 850px; */
+}
+.navstart{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    /* padding-left: 50px;
+    padding-right: 50px; */
+    margin: 0;
+}
+.btngroup2{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+/* COPYRIGHT FLIP ANIMATION */
+
+.btngroup1 .creditbtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: "Archivo", sans-serif;
+    font-size: 22px;
+    cursor: pointer;
+    margin-top: -40px;
+    height: 100px;
+    width: 200px;
+    
+}
+/* .creditbtn{
+    display: flex;
+    height: 20px;
+} */
+
+/* COPYRIGHT SYMBOL */
+
+.copyrightsymbol {
+    display: inline-block;
+    flex-shrink: 0;
+    transform: rotate(0deg);
+    transition: transform 0.7s ease;
+    transform-origin: center;
+    margin-right: 0;
+}
+/* TEXT ANIMATION CONTAINER */
+
+.credittext {
+    display: grid;
+    grid-template-areas: "text";
+    overflow: hidden;
+}
+
+/* BOTH LINKS OCCUPY THE SAME SPACE */
+
+.credittext a {
+    grid-area: text;
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+    color: white;
+}
+
+/* DEFAULT TEXT */
+
+.creditdefault {
+    transform: translateX(0);
+    margin-left: -60px;
+}
+
+/* HIDDEN NAME STARTS FROM THE RIGHT */
+
+.credithover {
+    transform: translateX(100%);
+}
+
+/* HOVER: ROTATE COPYRIGHT SYMBOL */
+
+.creditbtn:hover .copyrightsymbol {
+    transform: rotate(360deg);
+}
+
+/* ORIGINAL TEXT SLIDES OUT TO THE LEFT */
+
+.creditbtn:hover .creditdefault {
+    transform: translateX(-100%);
+}
+
+/* NAME SLIDES IN FROM THE RIGHT */
+
+.creditbtn:hover .credithover {
+    transform: translateX(0);
+}
+
+
+
+
+
+/* Small circle under each navigation item */
+
+.workbtn a,
+.aboutbtn a,
+.contactbtn a{
+    position: relative;
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    /* font-weight: 600; */
+    color: white;
+    text-decoration:none ;
+    /* gap: 100px; */
+}
+
+.workbtn a::after,
+.aboutbtn a::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%) scale(0);
+    transition: transform 0.3s ease;
+}
+.contactbtn a::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    left: 50%;
+    bottom: -20px;
+}
+
+ 
+
+/* Show the dot on hover */
+
+.workbtn a:hover::after,
+.aboutbtn a:hover::after{
+    transform: translateX(-50%) scale(1);
+}
+
+
+/* contact section  */
+
+.contactsection{
+    /* background-color: red; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.contactcontainer{
+    /* background-color: blue; */
+    width: 100%;
+    border-bottom: 1px solid #999D9E;
+    height: 400px
+    
+}
+.contactcontainer h1{
+    color: white;
+    font-size: 100px;
+    font-weight: 400;
+    width: 80%;
+}
+
+/* Contact form  */
+.contactleft{
+    /* background-color: red; */
+    width: 100%;
+    height: 1660px;
+    padding-left: 400px;
+    padding-top: 100px;
+    margin-top: 500px;
+    position: relative;
+}
+.contactcontainer1{
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    height: 20%;
+    width: 100%;
+}
+.contactform{
+    display: flex;
+    flex-direction: column;
+    /* background-color: green; */
+    gap: 20px;
+}
+.contactfield{
+    /* background-color: pink; */
+    display: flex;
+    border-bottom: 1px solid #999D9E;
+    color: white;
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding-top: 30px;
+    gap: 50px;
+    /* padding-right: 500px; */
+    width: 100%;
+}
+.contactnumber{
+    font-size: 16px;
+    font-weight: 400;
+}
+.contactinput{
+    display: flex;
+    flex-direction: column;
+    /* background-color: brown; */
+    color: white;
+    font-size: 26px;
+    font-weight: 400;
+    width: 100%;
+    height: 150px;
+    gap: 50px;
+    
+    
+}
+.contactname{
+    /* background-color: blue; */
+    color: white;
+    font-size: 26px;
+    font-weight: 400;
+}
+.contactinput input{
+    background-color: transparent;
+    color: white;
+    font-size: 26px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+}
+#contactmessage{
+    background-color: transparent;
+    border: none;
+    font-family: "Archivo", sans-serif;
+    font-size: 26px;
+    outline: none;
+    max-width: 500px;
+    color: white;
+    
+}
+.sectioncontact{
+    /* background-color: white; */
+    display: flex;
+    gap: 400px;
+}
+
+/* contact right  */
+
+.contactright{
+    /* background-color: aqua; */
+    width: 60%;
+    height: 1510px;
+}
+
+.contactportrait img{
+    width: 150px;
+    height: 150px;
+}
+.contactportrait{
+    /* background-color: blue; */
+    /* padding-bottom: 100px; */
+    /* padding-left: 100px; */
+    /* padding-right: 100px; */
+    padding-top: 100px;
+    margin-top: 150px;
+}
+.contactdetails{
+    display: flex;
+    /* background-color: red; */
+}
+.contactinfo{
+    /* background-color: yellowgreen; */
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    margin-top: 60px;
+}
+.contactlabel{
+    color: #999D9E;
+    font-size: 16px;
+    font-weight: 500;
+}
+.contactinfo a{
+    font-size: 26px;
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+}
+.contactinfo p{
+    font-size: 26px;
+    color: white;
+}
+.socialsbtn{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* FOOTER  */
+
+.socialsmain{
+    /* background-color: aqua; */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* height: 200px; */
+}
+.socials{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 150px;
+    margin-top: 200px;
+}
+.socials1{
+    display: flex;
+    gap: 70px;
+}
+.socialsmain1{
+    display: flex;
+    /* background-color: blue; */
+}
+.socialsmain1 p{
+    font-size: 16px;
+    font-weight: 600;
+    color: #999D9E;
+}
+.socialsbtn1{
+    display: flex;
+    /* background-color: azure; */
+    gap: 50px;
+}
+.socialsbtn1 a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+}
+.socials1 p{
+    font-size: 16px;
+    font-weight: 600;
+    color: #999D9E;
+}
+.socials1 h2{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+.sendbtn{
+    background-color: #1C1D20;
+    display: flex;
+    /* height: 800px; */
+    justify-content: end;
+    align-items: center;
+    margin-top: 50px;
+}
+.Sendbtn1{
+    
+    position: absolute;
+    bottom: -30px;
+    right: 30px;
+}
+button{
+    background-color: #455ce9;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
