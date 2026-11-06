@@ -475,11 +475,28 @@ body{
     color: white;
     text-decoration: none;
 }
+.menubtn{
+    display: none;
+}
+.mobilemenucontent{
+    display: none;
+}
+.mobilemenuheader{
+    display: none;
+}
 
 
 /* MOBILE RESPONSIVENESS */
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
+
+    html,
+    body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    }
 
     /* NAV BAR  */
 
@@ -507,13 +524,145 @@ body{
         display: none;
     }
 
-    .btngroup2::before{
-        content: "• Menu";
+    /* MOBILE MENU OVERLAY */
+    .menubtn{
         display: block;
-        color: #1c1d20;
+        width: auto;
+        height: auto;
+        padding: 0;
+        /* margin-top: -30px; */
+        background-color: transparent;
+        color: #1C1D20;
         font-size: 16px;
+        font-weight: 400;
+        border: none;
+        border-radius: 0;
         cursor: pointer;
     }
+    
+    
+
+    .mobilemenu{
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        background-color: #1C1D20;
+        padding: 30px 25px;
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-20px);
+
+        transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+    }
+
+    /* WHEN MENU IS OPEN */
+
+    .mobilemenu.active{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    /* MENU HEADER */
+
+    .mobilemenuheader{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobilemenuheader p,
+    .mobilemenusocials p{
+        color: #999D9E;
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    /* CLOSE BUTTON */
+
+    .menuclose{
+        width: 45px;
+        height: 45px;
+        background-color: #455ce9;
+        color: white;
+        font-size: 30px;
+        font-weight: 400;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    /* MENU CONTENT */
+
+    .mobilemenucontent{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        gap: 100px;
+        /* align-items: center; */
+        flex: 1;
+        width: 300px;
+        margin-top: 100px;
+    }
+
+    /* NAVIGATION LINKS */
+
+    .mobilemenulinks{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .mobilemenulinks a{
+        color: white;
+        font-size: clamp(32px, 8vw, 50px);
+        font-weight: 400;
+        text-decoration: none;
+        position: relative;
+    }
+
+    /* ACTIVE PAGE DOT */
+
+    .mobilemenulinks a.active::after{
+        content: "";
+        width: 8px;
+        height: 8px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /* SOCIAL LINKS ON THE RIGHT */
+
+    .mobilemenusocials{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        align-items: flex-start;
+    }
+
+    .mobilemenusocials a{
+        color: white;
+        font-size: 13px;
+        text-decoration: none;
+    }
+
+    /* end of menu side bar  */
 
     /* HERO SECTION */
 
@@ -536,12 +685,13 @@ body{
         padding: 0;
     }
 
-    .getintouch {
-        width: 140px;
-        height: 140px;
-        margin-right: 0;
-        top: 230px;
+    .getintouch{
+        width: 120px;
+        height: 120px;
+        /* margin-right: 0; */
+        top: 240px;
         right: 30px;
+        position: absolute;
     }
 
     .getintouch a {
@@ -647,9 +797,8 @@ body{
         position: relative;
         width: 311px;
         height: auto;
-        padding: 60px 24px 30px;
+        padding: 60px 32px 34px;
         align-items: stretch;
-        margin-top: 60px;
     }
     .footer{
         width: 100%;
@@ -662,12 +811,13 @@ body{
         justify-content: flex-start;
         gap: 0;
     }
-    .footer svg{
-        margin-left: 300px;
-        bottom: 70px;
+    .footer svg {
         position: absolute;
+        right: 24px;
+        bottom: 70px;
         width: 14px;
         height: 14px;
+        margin-left: 0;
     }
     .footer1{
         width: 100%;
@@ -692,10 +842,7 @@ body{
     .footer3 h2{
         margin-top: 5px;
     }
-    .getintouch1{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .getintouch{
         position: absolute;
         top: 155px;
         right: 38px;
@@ -706,7 +853,7 @@ body{
         border-radius: 50%;
         z-index: 1;
     }
-    .getintouch1 a{
+    .getintouch a{
         font-size: 16px;
     }
     .btnmain{
@@ -762,16 +909,37 @@ body{
     .socialsbtn{
         display: flex;
         flex-wrap: wrap;
-        gap: 30px;
+        /* gap: 30px; */
+        width: 300px;
     }
 
     .socialsbtn button{
         font-size: 16px;
         padding: 0;
     }
+    .socialsbtn a{
+        font-size: 16px;
+    }
     .more{
         width: 100%;
         /* background-color: aqua; */
+    }
+
+    .getintouch1{
+        background-color: #1d3fa7;
+        color: white;
+        width: 120px;
+        height: 120px;
+        border-radius: 80%;
+        position: absolute;
+        top: 155px;
+        left: 210px;
+        z-index: 1;
+    }
+    .getintouch1 a{
+        font-size: 16px;
+        color: white;
+        text-decoration: none;
     }
 
 }
