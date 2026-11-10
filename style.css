@@ -36,6 +36,7 @@ body{
 .herosection{
     background-color: #999D9E;
     height: 950px;
+    width: 100%;
 }
 .navstart{
     display: flex;
@@ -948,10 +949,9 @@ body{
 
     html,
     body {
-    width: 100%;
-    max-width: 100%;
+    /* width: 100%; */
     margin: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     }
     .navstart{
         /* background-color: #1d3fa7; */
@@ -1118,9 +1118,11 @@ body{
 
     /* hero section  */
     .herosection{
+        width: 100%;
         /* background-color: aqua; */
         height: 680px;
         /* position: relative; */
+        margin: 0;
     }
     .heromain{
         /* background-color: #1d3fa7; */
@@ -1129,6 +1131,9 @@ body{
         flex-direction: column;
         width: 100%;
         height: 91%;
+        margin: 0;
+        /* padding left: 10px;
+        padding right: 10px; */
     }
     .heromain img{
         position: absolute;
@@ -1265,7 +1270,8 @@ body{
         flex-direction: column;
         position: relative;
         margin: 0 8px;
-        width: 100%;
+        width: 96%;
+        justify-content: center;
     }
 
     /* .oralmain,
@@ -1519,7 +1525,7 @@ body{
         /* background-color: aqua; */
     }
     .worksection{
-        width: 359px;
+        width: 100%;
     }
 }
 
