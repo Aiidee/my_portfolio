@@ -237,10 +237,11 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 .wk1 img{
-    width: 550px;
-    height: 550px;
+    width: 90%;
+    height: 90%;
 }
 
 .wk1sub{
@@ -251,6 +252,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* margin-top: 1000px; */
 }
 .wk1sub2{
     background-color: #999D9E;
@@ -258,6 +260,7 @@ body{
     display: flex;
     justify-content: center;
     width: 100%;
+    /* margin-top: 1000px; */
 }
 
 .wk1sub1{
@@ -535,10 +538,9 @@ body{
 
     html,
     body {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    overflow-x: hidden;
+    /* width: 100%; */
+    /* margin: 0; */
+    /* overflow-x: hidden; */
     }
 
     /* nav bar  */
@@ -726,122 +728,155 @@ body{
     }
 
 
-    /* work section */
+    
+/* WORK SECTION */
 
-    .worksection{
+.worksection {
+    width: 100%;
     height: auto;
-    }
-    .worksection1{
-        /* background-color: red; */
-        /* height: auto; */
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-top: -100px;
-       
-    }
-    .wk1{
-        width: 60%;
-        height: 60%;
-    }
-    .wk1 img{
-        width: 250px;
-        height: 250px;
-    }
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 
-    .wk1sub{
-        /* background-color: blue; */
-        /* width: 50%; */
-        /* height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; */
-    }
-    .wk1sub2{
-        background-color: #999D9E;
-        padding: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 74%;
-        height: 250px;
-    }
+/* PROJECT SECTIONS */
 
-    .wk1sub1{
-        /* background-color: yellow; */
-        width: 359px;
-    }
-    .wk1sub1 h2{
-        font-size: 32px;
-        font-weight: 400;
-    }
-    .wk1sub1sub{
-        /* background-color: aqua; */
-        height: 50px;
-    }
-    .wk1sub1sub p{
-        font-size: 16px;
-        font-weight: 100;
-        /* margin: 0; */
-    }
-    .worksection2{
+.worksection1,
+.worksection1-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
     height: auto;
-    }
-    .worksection1-2{
-        /* background-color: red; */
-        /* height: auto; */
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        /* margin-top: 100px; */
-       
-    }
-    .wk1{
-        width: 60%;
-        height: 60%;
-    }
-    .wk1 img{
-        width: 250px;
-        height: 250px;
-    }
 
-    .wk1sub{
-        /* background-color: blue; */
-        /* width: 50%; */
-        /* height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; */
-    }
-    .wk1sub2{
-        background-color: #999D9E;
-        padding: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 74%;
-        height: 250px;
-    }
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
 
-    .wk1sub1{
-        /* background-color: yellow; */
-        width: 359px;
-    }
-    .wk1sub1 h2{
-        font-size: 32px;
-        font-weight: 400;
-    }
-    .wk1sub1sub{
-        /* background-color: aqua; */
-        height: 50px;
-    }
-    .wk1sub1sub p{
-        font-size: 16px;
-        font-weight: 100;
-        /* margin: 0; */
-    }
+.worksection1 {
+    margin-top: 0;
+}
+
+.worksection2 {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+/* EACH PROJECT */
+
+.wk1 {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: auto;
+
+    margin: 0 0 45px 0;
+    padding: 0;
+}
+
+/* IMAGE WRAPPER */
+
+.wk1sub {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* GREY IMAGE CONTAINER */
+
+.wk1sub2 {
+    background-color: #999D9E;
+
+    width: calc(100% - 48px);
+    height: 280px;
+
+    margin: 0 auto;
+    padding: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+/* PROJECT IMAGE */
+
+.wk1sub2 img {
+    display: block;
+
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+
+    object-fit: contain;
+    object-position: center;
+}
+
+/* PROJECT TITLE */
+
+.wk1sub1 {
+    width: calc(100% - 48px);
+    height: auto;
+
+    margin: 0 auto;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+.wk1sub1 h2 {
+    font-size: 32px;
+    font-weight: 400;
+
+    margin: 24px 0;
+}
+
+/* PROJECT DETAILS */
+
+.wk1sub1sub {
+    width: 100%;
+    height: auto;
+    min-height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px 0;
+    margin: 0;
+
+    border-top: 1px solid #999D9E;
+    box-sizing: border-box;
+}
+
+.wk1sub1sub p {
+    font-size: 16px;
+    font-weight: 100;
+    margin: 0;
+}
+
+/* SECOND WORK SECTION */
+
+.worksection1-2 .wk1 {
+    margin-bottom: 45px;
+}
+.worksection1 {
+    margin-top: 35px;
+}
+
 
     /* footer  */
 
@@ -849,9 +884,15 @@ body{
         position: relative;
         width: 335px;
         height: auto;
-        padding: 60px 24px 30px;
+        /* padding: 60px px 24px; */
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
         align-items: stretch;
-        margin-top: -60px;
+        margin-top: 20px;
+        margin-left: -8px;
+        
     }
     .footer{
         width: 100%;
