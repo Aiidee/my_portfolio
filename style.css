@@ -951,7 +951,7 @@ body{
     body {
     /* width: 100%; */
     margin: 0;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;git
     }
     .navstart{
         /* background-color: #1d3fa7; */
@@ -1269,7 +1269,7 @@ body{
         display: flex;
         flex-direction: column;
         position: relative;
-        margin: 0 8px;
+        margin: 0 7px;
         width: 96%;
         justify-content: center;
     }
