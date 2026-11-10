@@ -1265,8 +1265,23 @@ body{
         flex-direction: column;
         position: relative;
         margin: 0 8px;
-        width: 359px;
+        width: 100%;
     }
+
+    /* .oralmain,
+    .Checklymain,
+    .lumoramain,
+    .volunteermain {
+        width: 100%;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        margin: 0;
+        padding: 0 16px;
+    } */
 
     /* project rows  */
     .oral1,
